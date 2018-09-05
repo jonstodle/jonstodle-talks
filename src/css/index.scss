@@ -1,0 +1,90 @@
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+}
+
+body {
+  background-color: hsl(0, 0%, 10%);
+  font-family: sans-serif;
+  color: hsl(0, 0%, 10%);
+}
+
+#site-header {
+  text-align: center;
+  background-color: hsl(0, 0%, 30%);
+  color: hsl(0, 0%, 90%);
+  padding: 1.25rem 1rem 1rem;
+  text-transform: uppercase;
+  margin-top: 0;
+}
+
+#talk-list {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 1rem;
+}
+
+.talk-details-container {
+  width: 1000px;
+  max-width: 100%;
+  background-color: hsl(0, 0%, 90%);
+  padding: 0 1rem;
+  margin: .5rem 0;
+}
+
+.talk-details-header {
+  display: flex;
+  align-items: baseline;
+  cursor: pointer;
+  margin: 0 -1rem;
+  padding: 1rem;
+  border-bottom: 1px solid hsl(0, 0%, 30%);
+
+  &-title {
+    display: inline;
+    margin: 0;
+  }
+
+  &-date {
+    margin-left: 1rem;
+    flex: 1;
+    color: hsl(0, 0%, 30%);
+  }
+}
+
+.talk-details-detail-container {
+  display: flex;
+  justify-content: space-evenly;
+  padding: .5rem;
+  margin: -.5rem -1rem 0;
+
+  & > * {
+    margin: .5rem;
+  }
+}
+
+.talk-details-link {
+  padding: 1.25rem 1rem 1rem;
+  border: 1px solid hsl(0, 0%, 30%);
+  border-radius: 1rem;
+  text-decoration: none;
+  width: 100%;
+  text-align: center;
+  color: hsl(0, 0, 0);
+
+  &:active, &:hover, &:visited {
+    text-decoration: none;
+    color: hsl(0, 0, 0);
+  }
+
+  &:hover {
+    background-color: hsl(0, 0, 80%);
+  }
+}

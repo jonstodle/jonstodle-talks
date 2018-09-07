@@ -4,16 +4,32 @@
             {
                 "name": "Realm",
                 "date": "March 2017",
-                "slides": "realm/index.html",
-                "code": "https://github.com/jonstodle",
+                "resources": [
+                    {
+                        "title": "Slides",
+                        "link": "realm/index.html"
+                    },
+                    {
+                        "title": "Code",
+                        "link": "https://github.com/jonstodle"
+                    },
+                ],
                 "expanded": false
             },
             {
                 "name": "Rx",
                 "date": "April 2017",
-                "slides": "rx/index.html",
-                "code": "https://github.com/jonstodle",
-                "expanded": false
+                "resources": [
+                    {
+                        "title": "Slides",
+                        "link": "realm/index.html"
+                    },
+                    {
+                        "title": "Code",
+                        "link": "https://github.com/jonstodle"
+                    },
+                ],
+                "expanded": true
             },
         ];
 
@@ -67,28 +83,17 @@
                     )
                 ];
 
-                if (talk.expanded) {
+                if (talk.expanded && !!talk.resources) {
                     let details = [];
 
-                    if (!!talk.slides) {
+                    for (const resource of talk.resources) {
                         details.push(createElement(
                             'a',
                             {
                                 "class": "talk-details-link",
-                                "href": talk.slides
+                                "href": resource.link
                             },
-                            ["Slides"]
-                        ));
-                    }
-
-                    if (!!talk.code) {
-                        details.push(createElement(
-                            'a',
-                            {
-                                "class": "talk-details-link",
-                                "href": talk.code
-                            },
-                            ["Code"]
+                            [resource.title]
                         ));
                     }
 

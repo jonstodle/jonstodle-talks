@@ -2,34 +2,41 @@
         const talkListElement = document.getElementById('talk-list');
         let talks = [
             {
-                "name": "Realm",
-                "date": "March 2017",
+                "name": "Intro to Docker",
+                "date": "August 2018",
+                "resources": [
+                    {
+                        "title": "Code",
+                        "link": "https://github.com/jonstodle/WebDevDocker"
+                    }
+                ],
+                "expanded": false
+            },
+            {
+                "name": "RxJS",
+                "date": "May 2017",
                 "resources": [
                     {
                         "title": "Slides",
                         "link": "realm/index.html"
-                    },
-                    {
-                        "title": "Code",
-                        "link": "https://github.com/jonstodle"
                     },
                 ],
                 "expanded": false
             },
             {
-                "name": "Rx",
-                "date": "April 2017",
+                "name": "Realm",
+                "date": "March 2017",
                 "resources": [
                     {
                         "title": "Slides",
-                        "link": "realm/index.html"
+                        "link": "https://slides.com/jonstodle/realm-eng#/"
                     },
                     {
                         "title": "Code",
-                        "link": "https://github.com/jonstodle"
+                        "link": "https://github.com/jonstodle/RealmTodo"
                     },
                 ],
-                "expanded": true
+                "expanded": false
             },
         ];
 

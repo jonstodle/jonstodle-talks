@@ -23,6 +23,22 @@
         padding: 1rem;
     }
 
+    .header > div {
+        display: flex;
+        align-items: baseline;
+        flex: 1;
+    }
+
+    @media (max-width: 600px) {
+        .header > div {
+            flex-direction: column;
+        }
+    }
+
+    .header > span {
+        align-self: center;
+    }
+
     h2 {
         display: inline;
         margin: 0;
@@ -68,8 +84,10 @@
 
 <section>
     <div class="header" on:click={() => isExpanded = !isExpanded}>
-        <h2>{talk.title}</h2>
-        <span class="date">{talk.date}</span>
+        <div>
+            <h2>{talk.title}</h2>
+            <span class="date">{talk.date}</span>
+        </div>
         <span>{isExpanded ? '▲' : '▼'}</span>
     </div>
     {#if isExpanded}

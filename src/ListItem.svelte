@@ -21,6 +21,11 @@
         cursor: pointer;
         margin: 0 -1rem;
         padding: 1rem;
+        transition: background-color 200ms;
+    }
+
+    .header:hover {
+        background-color: #cccccc;
     }
 
     .header > div {
@@ -72,6 +77,7 @@
         color: black;
         transition: background-color 200ms;
     }
+
     a:active, a:hover, a:visited {
         text-decoration: none;
         color: black;

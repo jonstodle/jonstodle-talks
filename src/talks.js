@@ -9,7 +9,7 @@ const talks = [
             },
             {
                 title: 'Video',
-                link: 'https://vimeo.com/showcase/5531183/video/299622745'
+                link: 'https://youtu.be/VpSRGlgVXrE'
             },
         ]
     },

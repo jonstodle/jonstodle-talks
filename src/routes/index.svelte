@@ -1,2 +1,53 @@
-<h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
+<script lang="ts" context="module">
+  export async function load({fetch}) {
+    const res = await fetch('https://api.jonstodle.com/talks');
+
+    if (!res.ok) {
+      return {
+        props: {
+          talks: [],
+        }
+      };
+    }
+
+    return {
+      props: {
+        talks: await res.json(),
+      }
+    };
+  }
+</script>
+
+<script lang="ts">
+  import ListItem from '$lib/components/ListItem.svelte';
+  import type { Talk } from '$lib/types';
+
+  export let talks: Talk[];
+</script>
+
+<h1>Talks</h1>
+
+<main>
+  {#each talks as talk}
+    <ListItem {talk}/>
+  {/each}
+</main>
+
+<style>
+  h1 {
+    text-align: center;
+    background-color: #4d4d4d;
+    color: #e6e6e6;
+    padding: 1.25rem 1rem 1rem;
+    text-transform: uppercase;
+    margin: 0;
+  }
+
+  main {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+  }
+</style>

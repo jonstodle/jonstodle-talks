@@ -39,6 +39,7 @@
     background-color: #e6e6e6;
     padding: 0 1rem;
     margin: 0.5rem 0;
+    border-radius: 5px;
   }
 
   .header {
@@ -48,6 +49,7 @@
     margin: 0 -1rem;
     padding: 1rem;
     transition: background-color 200ms;
+    border-radius: 5px;
   }
 
   .header:hover {
@@ -96,7 +98,7 @@
   a {
     padding: 1.25rem 1rem 1rem;
     border: 1px solid #4d4d4d;
-    border-radius: 1rem;
+    border-radius: 5px;
     text-decoration: none;
     width: 100%;
     text-align: center;

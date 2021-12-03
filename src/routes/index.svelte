@@ -17,6 +17,10 @@
   export let talks: Talk[];
 </script>
 
+<svelte:head>
+  <title>Jon G Stødle's talks</title>
+</svelte:head>
+
 <h1>Talks</h1>
 
 <main>

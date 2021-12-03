@@ -10,7 +10,7 @@
   <div class="header" on:click={() => isExpanded = !isExpanded}>
     <h2>{talk.title}</h2>
     <span class="date">{talk.date}</span>
-    <span>{isExpanded ? '▲' : '▼'}</span>
+    <span class="chevron" class:expanded={isExpanded}>▼</span>
   </div>
   {#if isExpanded}
     <div class="details" transition:slide>
@@ -63,6 +63,14 @@
 
   .date {
     color: #4d4d4d;
+  }
+
+  .chevron {
+    transition: 250ms ease-in-out;
+  }
+
+  .expanded {
+    rotate: 180deg;
   }
 
   .details {

@@ -1,18 +1,10 @@
 <script lang="ts" context="module">
-  export async function load({fetch}) {
-    const res = await fetch('https://api.jonstodle.com/talks');
+  import { getTalks } from '$lib/data';
 
-    if (!res.ok) {
-      return {
-        props: {
-          talks: [],
-        }
-      };
-    }
-
+  export async function load() {
     return {
       props: {
-        talks: await res.json(),
+        talks: await getTalks()
       }
     };
   }

@@ -1,17 +1,10 @@
 <script lang="ts" context="module">
-  export async function load({fetch}) {
-    let talks = [];
+  import { getTalks } from '$lib/data';
 
-    const {data, error} = await fetch('/talks').then(r => r.json());
-    if (error) {
-      console.error(error);
-    } else {
-      talks = data;
-    }
-
+  export async function load() {
     return {
       props: {
-        talks
+        talks: await getTalks()
       }
     };
   }

@@ -8,13 +8,19 @@ const apiKey =
 const supabase = createClient(apiUrl, apiKey);
 
 export const getTalks = async () => {
-	const { data, error } = await supabase
-		.from<Talk>('talks')
-		.select('*')
-		.order('date', { ascending: false });
-	if (error) {
-		throw error;
-	}
+	try {
+		const { data, error } = await supabase
+			.from<Talk>('talks')
+			.select('*')
+			.order('date', { ascending: false });
+		if (error) {
+			console.error(error);
+			return [] as Talk[];
+		}
 
-	return data;
+		return data;
+	} catch (e) {
+		console.error(e);
+		return [] as Talk[];
+	}
 };

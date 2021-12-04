@@ -1,10 +1,24 @@
 <script lang="ts" context="module">
-  import { getTalks } from '$lib/data';
+  import { apiKey, apiUrl } from '$lib/supabase';
 
-  export async function load() {
+  export async function load({fetch}) {
+    let talks = [];
+
+    try {
+      talks = await fetch(`${apiUrl}/rest/v1/talks?select=*&order=date.desc.nullslast`, {
+        headers: {
+          apiKey: apiKey,
+          authorization: `Bearer ${apiKey}`
+        }
+      })
+        .then(r => r.json());
+    } catch (e) {
+      console.error(e);
+    }
+
     return {
       props: {
-        talks: await getTalks()
+        talks
       }
     };
   }

@@ -1,10 +1,8 @@
 <script lang="ts" context="module">
-  import { getTalks } from '$lib/data';
-
-  export async function load() {
+  export async function load({fetch}) {
     return {
       props: {
-        talks: await getTalks()
+        talks: await fetch('/talks').then(r => r.json())
       }
     };
   }

@@ -1,3 +1,25 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Fonts */
+@font-face {
+  font-family: "Atkinson Hyperlegible";
+  src: url("/fonts/Atkinson-Hyperlegible-Regular-102.ttf");
+}
+
+@font-face {
+  font-family: "Atkinson Hyperlegible";
+  src: url("/fonts/Atkinson-Hyperlegible-Bold-102.ttf");
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: "JetBrains Mono";
+  src: url("/fonts/JetBrainsMono-Regular.ttf");
+}
+
+body {
+  @apply bg-stone-900;
+  font-family: "Atkinson Hyperlegible", sans-serif;
+}

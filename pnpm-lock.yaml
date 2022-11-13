@@ -5,6 +5,7 @@ specifiers:
   '@sveltejs/kit': next
   '@typescript-eslint/eslint-plugin': ^5.27.0
   '@typescript-eslint/parser': ^5.27.0
+  '@xata.io/client': ^0.20.2
   autoprefixer: ^10.4.13
   eslint: ^8.16.0
   eslint-config-prettier: ^8.3.0
@@ -19,6 +20,9 @@ specifiers:
   tslib: ^2.3.1
   typescript: ^4.7.4
   vite: ^3.1.0
+
+dependencies:
+  '@xata.io/client': 0.20.2_typescript@4.8.4
 
 devDependencies:
   '@sveltejs/adapter-auto': 1.0.0-next.87
@@ -425,6 +429,14 @@ packages:
       - encoding
       - supports-color
     dev: true
+
+  /@xata.io/client/0.20.2_typescript@4.8.4:
+    resolution: {integrity: sha512-GT88eGcuS/6iNI9LXrQvhj7zL0SCcGu7X5cgPAxSqX9X2YeAwTcBY+BH+KcibhCphKS/eJOxlo/jaYGRvDgTQg==}
+    peerDependencies:
+      typescript: '>=4.5'
+    dependencies:
+      typescript: 4.8.4
+    dev: false
 
   /abbrev/1.1.1:
     resolution: {integrity: sha512-nne9/IiQ/hzIhY6pdDnbBtz7DjPTKrY00P/zvPSm5pOFkl6xuGrGnXn/VtTNNfNtAfZ9/1RtehkszU9qcTii0Q==}
@@ -2244,7 +2256,6 @@ packages:
     resolution: {integrity: sha512-QCh+85mCy+h0IGff8r5XWzOVSbBO+KfeYrMQh7NJ58QujwcE22u+NUSmUxqF+un70P9GXKxa2HCNiTTMJknyjQ==}
     engines: {node: '>=4.2.0'}
     hasBin: true
-    dev: true
 
   /undici/5.12.0:
     resolution: {integrity: sha512-zMLamCG62PGjd9HHMpo05bSLvvwWOZgGeiWlN/vlqu3+lRo3elxktVGEyLMX+IO7c2eflLjcW74AlkhEZm15mg==}

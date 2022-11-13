@@ -49,7 +49,7 @@
 
 <style>
 	a {
-		@apply rounded-lg border-2 border-transparent hover:border-stone-500 w-full p-2 text-center bg-stone-100 hover:bg-stone-200 flex justify-center items-center gap-1;
+		@apply rounded-lg border-2 border-transparent hover:border-stone-500 w-full p-2 text-center bg-stone-100 hover:bg-stone-200 flex justify-center items-center gap-1 transition;
 	}
 
 	a > span {

@@ -15,7 +15,7 @@
 		on:click={() => (isExpanded = !isExpanded)}
 	>
 		<h2 class="flex-grow text-xl">{talk.title}</h2>
-		<span class="font-['JetBrains_Mono']">{Intl.DateTimeFormat().format(talk.date)}</span>
+		<span class="font-['JetBrains_Mono']">{Intl.DateTimeFormat().format(new Date(talk.date))}</span>
 		<span class="transition" class:rotate-180={isExpanded}>▼</span>
 	</div>
 	{#if isExpanded}

@@ -6,7 +6,7 @@ export const db = (db: D1Database) => ({
 		let talks: Talk[] = [];
 
 		try {
-			const result = await db.prepare('select * from talks order by date').all<Talk>();
+			const result = await db.prepare('select * from talks order by date desc').all<Talk>();
 
 			if (!result.success) {
 				console.error('Failed to fetch talks', result.error);

@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "dev": "wrangler pages dev --local --live-reload -- vite dev",
+    "dev": "vite dev",
     "build": "vite build",
     "preview": "vite preview",
     "check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
@@ -35,8 +35,5 @@
     "vite": "^4.1.4",
     "wrangler": "2.12.0"
   },
-  "type": "module",
-  "dependencies": {
-    "@xata.io/client": "^0.20.2"
-  }
+  "type": "module"
 }

@@ -1,8 +1,10 @@
 import type { PageServerLoad } from './$types';
-import { xataClient } from '$lib/server/db';
+import { db } from '$lib/server/db';
+import type { App } from '../app';
 
-export const load: PageServerLoad = async () => {
+export const load = (async ({ platform }) => {
+	const cloudflare = platform as App.Platform;
 	return {
-		talks: await xataClient.db.talks.sort('date', 'desc').getAll()
+		talks: await db(cloudflare.env!.DB).getTalks()
 	};
-};
+}) satisfies PageServerLoad;

@@ -2,15 +2,15 @@
 
 create table talks
 (
-    id           integer primary key autoincrement,
-    title        text not null,
-    presented_at date not null,
-    slides       text,
-    video        text,
-    code         text
+    id     integer primary key autoincrement,
+    title  text not null,
+    date   date not null,
+    slides text,
+    video  text,
+    code   text
 );
 
-insert into talks (title, presented_at, slides, video, code)
+insert into talks (title, date, slides, video, code)
 values ('Getting Started with Svelte - Cybernetically Enhanced Web Apps', '2020-05-01',
         'https://drive.google.com/file/d/15L1vvQFSvl1Zhmr4SLI_kWmJTe0Jh3Wa/view?usp=sharing',
         'https://youtu.be/eK27uMco3UI', null),

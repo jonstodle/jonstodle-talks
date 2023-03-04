@@ -7,7 +7,6 @@ specifiers:
   '@sveltejs/kit': next
   '@typescript-eslint/eslint-plugin': ^5.54.0
   '@typescript-eslint/parser': ^5.54.0
-  '@xata.io/client': ^0.20.2
   autoprefixer: ^10.4.13
   better-sqlite3: ^8.1.0
   eslint: ^8.35.0
@@ -24,9 +23,6 @@ specifiers:
   typescript: ^4.9.5
   vite: ^4.1.4
   wrangler: 2.12.0
-
-dependencies:
-  '@xata.io/client': 0.20.2_typescript@4.9.5
 
 devDependencies:
   '@cloudflare/workers-types': 4.20230228.0
@@ -969,14 +965,6 @@ packages:
       '@typescript-eslint/types': 5.54.0
       eslint-visitor-keys: 3.3.0
     dev: true
-
-  /@xata.io/client/0.20.2_typescript@4.9.5:
-    resolution: {integrity: sha512-GT88eGcuS/6iNI9LXrQvhj7zL0SCcGu7X5cgPAxSqX9X2YeAwTcBY+BH+KcibhCphKS/eJOxlo/jaYGRvDgTQg==}
-    peerDependencies:
-      typescript: '>=4.5'
-    dependencies:
-      typescript: 4.9.5
-    dev: false
 
   /acorn-jsx/5.3.2_acorn@8.8.2:
     resolution: {integrity: sha512-rq9s+JNhf0IChjtDXxllJ7g41oZk5SlXtp0LHwyA5cejwn7vKmKp4pPri6YEePv2PU65sAsegbXtIinmDFDXgQ==}
@@ -2856,6 +2844,7 @@ packages:
     resolution: {integrity: sha512-1FXk9E2Hm+QzZQ7z+McJiHL4NW1F2EzMu9Nq9i3zAaGqibafqYwCVU6WyWAuyQRRzOlxou8xZSyXLEN8oKj24g==}
     engines: {node: '>=4.2.0'}
     hasBin: true
+    dev: true
 
   /undici/5.14.0:
     resolution: {integrity: sha512-yJlHYw6yXPPsuOH0x2Ib1Km61vu4hLiRRQoafs+WUgX1vO64vgnxiCEN9dpIrhZyHFsai3F0AEj4P9zy19enEQ==}

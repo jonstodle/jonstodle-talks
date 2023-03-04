@@ -1,6 +1,22 @@
-import { XATA_API_KEY } from '$env/static/private';
-import { XataClient } from './xata';
+import type { D1Database } from '@cloudflare/workers-types';
+import type { Talk } from '$lib/server/models';
 
-export const xataClient = new XataClient({
-	apiKey: XATA_API_KEY
+export const db = (db: D1Database) => ({
+	async getTalks(): Promise<Talk[]> {
+		let talks: Talk[] = [];
+
+		try {
+			const result = await db.prepare('select * from talks order by date').all<Talk>();
+
+			if (!result.success) {
+				console.error('Failed to fetch talks', result.error);
+			} else {
+				talks = result.results ?? [];
+			}
+		} catch (e) {
+			console.error('DB connection crashed', e);
+		}
+
+		return talks;
+	}
 });

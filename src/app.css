@@ -18,8 +18,3 @@
   font-family: "JetBrains Mono";
   src: url("/fonts/JetBrainsMono-Regular.ttf");
 }
-
-body {
-  @apply bg-stone-900;
-  font-family: "Atkinson Hyperlegible", sans-serif;
-}

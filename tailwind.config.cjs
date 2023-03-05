@@ -1,8 +1,13 @@
-/** @type {import('tailwindcss').Config} */
+/** @type {import("tailwindcss").Config} */
 module.exports = {
-  content: ['./src/**/*.{html,js,svelte,ts}'],
+  content: ["./src/**/*.{html,js,svelte,ts}"],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        body: "Atkinson Hyperlegible, sans-serif",
+        mono: "JetBrains Mono, monospace"
+      }
+    }
   },
-  plugins: [],
-}
+  plugins: []
+};

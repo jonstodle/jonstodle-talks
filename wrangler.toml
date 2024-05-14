@@ -3,5 +3,5 @@ compatibility_date = "2023-03-03"
 
 [[d1_databases]]
 binding = "DB" # i.e. available in your Worker on env.DB
-database_name = "jgs-talks"
-database_id = "55e60706-aa28-45c1-8d0e-84289240815e"
+database_name = "jonstodle-talks"
+database_id = "0f72882c-5afc-4486-b137-882ea0930c24"
